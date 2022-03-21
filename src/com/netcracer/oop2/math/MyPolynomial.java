@@ -22,10 +22,10 @@ public class MyPolynomial {
     public String toString() {
         StringBuilder s = new StringBuilder("");
         for (int i = this.getDegree(); i >= 0; i--) {
-            if (this.coeffs[i] == 0) continue;
+            if (Math.abs(this.coeffs[i]-0) <= 0.00001) continue;
             if ((this.coeffs[i] > 0) && (i != this.getDegree()))
                 s.append("+");
-            if ((int) this.coeffs[i] == this.coeffs[i]) s.append((int) this.coeffs[i]);
+            if (Math.abs((int) this.coeffs[i]-this.coeffs[i]) <= 0.00001) s.append((int) this.coeffs[i]);
             else s.append(this.coeffs[i]);
             if (i == 1) s.append("x");
             else if (i != 0) s.append("x^" + i);

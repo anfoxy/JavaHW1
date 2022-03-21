@@ -28,8 +28,13 @@ public class MyTriangle {
         double a = v1.distance(v2);
         double b = v2.distance(v3);
         double c = v3.distance(v1);
-        if (a == b && a == c && b == c) return "Equilateral ";
-        if (a == b || a == c || b == c) return "Isosceles ";
+        double epsilon = 0.000001d;
+
+
+
+
+        if (Math.abs(a-b) <= 0.00001 && Math.abs(a-c) <= 0.00001 && Math.abs(c-b) <= 0.00001) return "Equilateral ";
+        if (Math.abs(a-b) <= 0.00001 || Math.abs(a-c) <= 0.00001 || Math.abs(c-b) <= 0.00001) return "Isosceles ";
         else return "Scalene";
     }
 

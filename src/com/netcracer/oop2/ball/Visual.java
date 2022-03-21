@@ -25,11 +25,11 @@ public class Visual extends JFrame{
         pack();
         setContentPane(panel);
 
-        SpinnerNumberModel spinnerNumberModelToY = new SpinnerNumberModel(100,10,490,1);
+        SpinnerNumberModel spinnerNumberModelToY = new SpinnerNumberModel(100,10,480,1);
         yPosition.setModel(spinnerNumberModelToY);
-        SpinnerNumberModel spinnerNumberModelToX = new SpinnerNumberModel(100,10,580,1);
+        SpinnerNumberModel spinnerNumberModelToX = new SpinnerNumberModel(100,10,570,1);
         xPosition.setModel(spinnerNumberModelToX);
-        SpinnerNumberModel spinnerNumberModelToSpeed = new SpinnerNumberModel(10,1,100,1);
+        SpinnerNumberModel spinnerNumberModelToSpeed = new SpinnerNumberModel(10,1,15,1);
         speedPosition.setModel(spinnerNumberModelToSpeed);
         SpinnerNumberModel spinnerNumberModelToDirection = new SpinnerNumberModel(-10,-180,180,1);
         dPosition.setModel(spinnerNumberModelToDirection);

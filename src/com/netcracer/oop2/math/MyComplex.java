@@ -53,11 +53,11 @@ public class MyComplex {
     }
 
     public boolean equals(double real, double imag) {
-        return (imag == this.imag) && (real == this.real);
+        return (Math.abs(imag-this.imag) <= 0.00001) && (Math.abs(real-this.real) <= 0.00001);
     }
 
     public boolean equals(MyComplex another) {
-        return (another.imag == this.imag) && (another.real == this.real);
+        return (Math.abs(another.imag-this.imag) <= 0.00001) && (Math.abs(another.real-this.real) <= 0.00001);
     }
 
     public double magnitude() {
