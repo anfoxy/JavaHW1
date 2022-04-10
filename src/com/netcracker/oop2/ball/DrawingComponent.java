@@ -1,4 +1,4 @@
-package com.netcracer.oop2.ball;
+package com.netcracker.oop2.ball;
 
 import javax.swing.*;
 import java.awt.*;

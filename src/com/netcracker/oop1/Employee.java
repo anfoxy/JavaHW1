@@ -1,4 +1,4 @@
-package com.netcracer.oop1;
+package com.netcracker.oop1;
 
 import java.util.Objects;
 

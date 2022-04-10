@@ -1,6 +1,4 @@
-package com.netcracer.oop2.ball;
-
-import com.netcracer.oop2.ball.Ball;
+package com.netcracker.oop2.ball;
 
 import java.util.Objects;
 

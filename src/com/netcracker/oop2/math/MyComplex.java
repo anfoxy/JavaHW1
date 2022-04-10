@@ -1,4 +1,4 @@
-package com.netcracer.oop2.math;
+package com.netcracker.oop2.math;
 
 import java.util.Objects;
 

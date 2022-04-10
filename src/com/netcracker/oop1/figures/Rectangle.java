@@ -1,4 +1,4 @@
-package com.netcracer.oop1.figures;
+package com.netcracker.oop1.figures;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package com.netcracer.oop1.library;
+package com.netcracker.oop1.library;
 
 import java.util.Arrays;
 import java.util.Objects;

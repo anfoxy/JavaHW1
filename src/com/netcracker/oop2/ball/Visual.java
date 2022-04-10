@@ -1,7 +1,6 @@
-package com.netcracer.oop2.ball;
+package com.netcracker.oop2.ball;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;

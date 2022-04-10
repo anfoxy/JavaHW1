@@ -1,11 +1,11 @@
-package com.netcracer;
+package com.netcracker;
 
-import com.netcracer.oop1.figures.trangle.*;
-import com.netcracer.oop1.library.*;
-import com.netcracer.oop2.ball.Visual;
-import com.netcracer.oop2.math.*;
-import com.netcracer.oop1.figures.*;
-import com.netcracer.oop1.*;
+import com.netcracker.oop1.figures.trangle.*;
+import com.netcracker.oop1.library.*;
+import com.netcracker.oop2.ball.Visual;
+import com.netcracker.oop2.math.*;
+import com.netcracker.oop1.figures.*;
+import com.netcracker.oop1.*;
 
 import java.util.Arrays;
 

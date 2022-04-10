@@ -1,4 +1,4 @@
-package com.netcracer.oop1.figures.trangle;
+package com.netcracker.oop1.figures.trangle;
 
 import java.util.Objects;
 
