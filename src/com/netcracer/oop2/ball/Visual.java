@@ -21,7 +21,7 @@ public class Visual extends JFrame{
     public static Container container;
 
     public Visual() {
-        super("График полета мяча");
+        super("движение мяча");
         pack();
         setContentPane(panel);
 
@@ -55,6 +55,7 @@ public class Visual extends JFrame{
                     y.add((int)ball.getY());
                     ball.move();
                 }
+
                 if (container.collidesVertical(ball)){
                     ball.reflectVertical();
                 }else if(container.collidesHorizontal(ball)){
@@ -68,6 +69,7 @@ public class Visual extends JFrame{
                     y.add((int)ball.getY());
                     ball.move();
                 }
+
                 jcp.add(new DrawingComponent ());
                 panel.updateUI();
 

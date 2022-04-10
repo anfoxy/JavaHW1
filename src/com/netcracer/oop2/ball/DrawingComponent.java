@@ -2,11 +2,40 @@ package com.netcracer.oop2.ball;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 class DrawingComponent extends JPanel {
+    ArrayList<Integer> x  = new ArrayList<Integer>();
+    ArrayList<Integer> y  = new ArrayList<Integer>();
 
+    public void move(Ball ball,Container container){
+        x.clear();
+        y.clear();
+
+        while (container.collides(ball)){
+            x.add((int)ball.getX());
+            y.add((int)ball.getY());
+            ball.move();
+        }
+
+        if (container.collidesVertical(ball)){
+            ball.reflectVertical();
+        }else if(container.collidesHorizontal(ball)){
+            ball.reflectHorizontal();
+        }
+        x.add((int)ball.getX());
+        y.add((int)ball.getY());
+        ball.move();
+        while (container.collides(ball)){
+            x.add((int)ball.getX());
+            y.add((int)ball.getY());
+            ball.move();
+        }
+        repaint();
+
+    }
     @Override
-    public void paint(Graphics gh) {
+    public void paintComponent(Graphics gh) {
 
         int [] x1 = new int[Visual.x.size()];
         int [] y1 = new int[Visual.y.size()];

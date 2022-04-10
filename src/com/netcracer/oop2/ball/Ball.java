@@ -1,5 +1,7 @@
 package com.netcracer.oop2.ball;
 
+import java.util.Objects;
+
 public class Ball {
     private float x;
     private float y;
@@ -15,6 +17,14 @@ public class Ball {
         if (direction < -180) direction = -180;
         this.xDelta = (float) (speed * Math.cos((double) direction/57.3));
         this.yDelta = (float) ( -speed * Math.sin((double) direction/57.3));
+    }
+
+    public Ball(float x, float y, int radius, float xDelta, float yDelta) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.xDelta = xDelta;
+        this.yDelta = yDelta;
     }
 
     public float getX() {
@@ -66,6 +76,9 @@ public class Ball {
         x += xDelta;
         y += yDelta;
     }
+    public Ball MotionСheck() {
+        return new Ball(x+xDelta,y+yDelta,radius,xDelta,yDelta);
+    }
 
     public void reflectHorizontal() {
         xDelta = -xDelta;
@@ -73,5 +86,18 @@ public class Ball {
 
     public void reflectVertical() {
         yDelta = -yDelta;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ball ball = (Ball) o;
+        return Float.compare(ball.x, x) == 0 && Float.compare(ball.y, y) == 0 && radius == ball.radius && Float.compare(ball.xDelta, xDelta) == 0 && Float.compare(ball.yDelta, yDelta) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y, radius, xDelta, yDelta);
     }
 }

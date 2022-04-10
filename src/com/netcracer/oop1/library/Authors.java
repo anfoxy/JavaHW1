@@ -1,5 +1,7 @@
 package com.netcracer.oop1.library;
 
+import java.util.Objects;
+
 public class Authors {
     private String name;
     private String email;
@@ -37,6 +39,19 @@ public class Authors {
 
     public void setGender(char gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Authors authors = (Authors) o;
+        return gender == authors.gender && Objects.equals(name, authors.name) && Objects.equals(email, authors.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, email, gender);
     }
 
     @Override
